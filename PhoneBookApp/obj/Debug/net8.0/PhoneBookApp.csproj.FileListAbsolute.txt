@@ -1,0 +1,15 @@
+G:\CSharp\CP2Program\PhoneBookApp\bin\Debug\net8.0\PhoneBookApp.exe
+G:\CSharp\CP2Program\PhoneBookApp\bin\Debug\net8.0\PhoneBookApp.deps.json
+G:\CSharp\CP2Program\PhoneBookApp\bin\Debug\net8.0\PhoneBookApp.runtimeconfig.json
+G:\CSharp\CP2Program\PhoneBookApp\bin\Debug\net8.0\PhoneBookApp.dll
+G:\CSharp\CP2Program\PhoneBookApp\bin\Debug\net8.0\PhoneBookApp.pdb
+G:\CSharp\CP2Program\PhoneBookApp\obj\Debug\net8.0\PhoneBookApp.GeneratedMSBuildEditorConfig.editorconfig
+G:\CSharp\CP2Program\PhoneBookApp\obj\Debug\net8.0\PhoneBookApp.AssemblyInfoInputs.cache
+G:\CSharp\CP2Program\PhoneBookApp\obj\Debug\net8.0\PhoneBookApp.AssemblyInfo.cs
+G:\CSharp\CP2Program\PhoneBookApp\obj\Debug\net8.0\PhoneBookApp.csproj.CoreCompileInputs.cache
+G:\CSharp\CP2Program\PhoneBookApp\obj\Debug\net8.0\PhoneBookApp.sourcelink.json
+G:\CSharp\CP2Program\PhoneBookApp\obj\Debug\net8.0\PhoneBookApp.dll
+G:\CSharp\CP2Program\PhoneBookApp\obj\Debug\net8.0\refint\PhoneBookApp.dll
+G:\CSharp\CP2Program\PhoneBookApp\obj\Debug\net8.0\PhoneBookApp.pdb
+G:\CSharp\CP2Program\PhoneBookApp\obj\Debug\net8.0\PhoneBookApp.genruntimeconfig.cache
+G:\CSharp\CP2Program\PhoneBookApp\obj\Debug\net8.0\ref\PhoneBookApp.dll
