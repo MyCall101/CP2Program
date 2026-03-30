@@ -1,18 +1,27 @@
 ﻿// See https://aka.ms/new-console-template for more information
 bool loop = true;
+int index = 0;
+
+string[] names = new string[5];
+long[] contacts = new long[5];
+string[] course = new string[5];
+string[] address = new string[5];
+
 while (loop)
 {
     //Console.Clear();
     int action = 0;
+
     DisplayMenu(ref action);
 
     switch (action)
     {
         case 1: // ADD CONTACT
-            AddContact();
+            AddContact(names,contacts,course,address,index);
+            index +=1;
             break;
         case 2: // VIEW CONTACT
-            ViewContact();
+            ViewContact(names,contacts,course,address);
             break;
         case 3: // EDIT INFORMATION
             EditContact();
@@ -46,45 +55,74 @@ static void EditContact()
 }
 
 // View contact information
-static void ViewContact()
+static void ViewContact(string[] names,long[] contacts,string[] course, string[] address)
 {
     Console.WriteLine("\n||================================================================================================================================================||");
     Console.WriteLine("||***************************************************************** CONTACT LIST *****************************************************************||");
     Console.WriteLine("||================================================================================================================================================||");
     Console.WriteLine("||------------>NAME<------------||--->CONTACT #<---||--->COURSE & YEAR<---||------------------------------->ADDRESS<------------------------------||");
     Console.WriteLine("||******************************||*****************||*********************||**********************************************************************||");
+    string display = "";
+    if (names[0] == null)
+    {
+        display = String.Format("||{0,30}{1,15}{2,20}{3,79}||", " ", "", "NO CONTACT", " ");
+        Console.WriteLine(display);
+    }
+    else
+    {
+
+        for (int i = 0; i <= names.Length - 1; i++)
+        {
+            if (names[i] != null)
+            {
+                display = String.Format("||{0,-30}||{1,-17}||{2,-21}||{3,-70}||", names[i], contacts[i], course[i], address[i]);
+                Console.WriteLine(display);
+            }
+            else
+            {
+                break;
+            }
+            
+        }
+    }
+    Console.WriteLine("||================================================================================================================================================||");
+
 }
 
 // Add contact information
-static void AddContact()
+static void AddContact(string[] names,long[] contacts,string[] course,string[] address,int index)
 {
     
-    string name, course_year, address;
-    int contact_number;
+    string name, course_year, _address;
+    long contact_number;
 
     Console.Write("\n\tEnter name : ");
     name = Console.ReadLine();
+    names[index] = name;
 
     contact_number = CheckValidInteger("\n\tContact number : ");
+    contacts[index] = contact_number;
     
     Console.Write("\n\tCourse & Year : ");
     course_year = Console.ReadLine();
+    course[index] = course_year;
 
 
     Console.Write("\n\tAddress : ");
-    address = Console.ReadLine();
+    _address = Console.ReadLine();
+    address[index] = _address;
     
 }
 
 // Check valid integer input
-static int CheckValidInteger(string prompt)
+static long CheckValidInteger(string prompt)
 {
     while (true)
     {
         try
         {
             Console.Write(prompt);
-            int input = int.Parse(Console.ReadLine());
+            long input = long.Parse(Console.ReadLine());
             return input;
         }
         catch (Exception ex)
