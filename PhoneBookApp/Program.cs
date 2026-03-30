@@ -2,10 +2,7 @@
 bool loop = true;
 int index = 0;
 
-string[] names = new string[5];
-long[] contacts = new long[5];
-string[] course = new string[5];
-string[] address = new string[5];
+string[,] persons = new string[5,4];
 
 while (loop)
 {
@@ -17,11 +14,11 @@ while (loop)
     switch (action)
     {
         case 1: // ADD CONTACT
-            AddContact(names,contacts,course,address,index);
+            AddContact(persons,index);
             index +=1;
             break;
         case 2: // VIEW CONTACT
-            ViewContact(names,contacts,course,address);
+            ViewContact(persons);
             break;
         case 3: // EDIT INFORMATION
             EditContact();
@@ -55,7 +52,7 @@ static void EditContact()
 }
 
 // View contact information
-static void ViewContact(string[] names,long[] contacts,string[] course, string[] address)
+static void ViewContact(string[,] persons)
 {
     Console.WriteLine("\n||================================================================================================================================================||");
     Console.WriteLine("||***************************************************************** CONTACT LIST *****************************************************************||");
@@ -63,36 +60,33 @@ static void ViewContact(string[] names,long[] contacts,string[] course, string[]
     Console.WriteLine("||------------>NAME<------------||--->CONTACT #<---||--->COURSE & YEAR<---||------------------------------->ADDRESS<------------------------------||");
     Console.WriteLine("||******************************||*****************||*********************||**********************************************************************||");
     string display = "";
-    if (names[0] == null)
+    if (persons[0, 0] == null)
     {
         display = String.Format("||{0,30}{1,15}{2,20}{3,79}||", " ", "", "NO CONTACT", " ");
         Console.WriteLine(display);
+        Console.WriteLine("||------------------------------------------------------------------------------------------------------------------------------------------------||");
     }
     else
     {
-
-        for (int i = 0; i <= names.Length - 1; i++)
+        for (int i = 0; i <= persons.GetLength(0) - 1; i++)
         {
-            if (names[i] != null)
+            if (persons[i,0] != null)
             {
-                display = String.Format("||{0,-30}||{1,-17}||{2,-21}||{3,-70}||", names[i], contacts[i], course[i], address[i]);
+                display = String.Format("||{0,-30}||{1,-17}||{2,-21}||{3,-70}||", persons[i,0], persons[i,1], persons[i,2], persons[i,3]);
                 Console.WriteLine(display);
                 Console.WriteLine("||------------------------------||-----------------||---------------------||----------------------------------------------------------------------||");
-
             }
             else
             {
                 break;
             }
-            
         }
     }
-//    Console.WriteLine("||================================================================================================================================================||");
 
 }
 
 // Add contact information
-static void AddContact(string[] names,long[] contacts,string[] course,string[] address,int index)
+static void AddContact(string[,] persons,int index)
 {
     
     string name, course_year, _address;
@@ -100,19 +94,18 @@ static void AddContact(string[] names,long[] contacts,string[] course,string[] a
 
     Console.Write("\n\tEnter name : ");
     name = Console.ReadLine();
-    names[index] = name;
+    persons[index,0] = name;
 
     contact_number = CheckValidInteger("\n\tContact number : ");
-    contacts[index] = contact_number;
+    persons[index,1] = contact_number.ToString();
     
     Console.Write("\n\tCourse & Year : ");
     course_year = Console.ReadLine();
-    course[index] = course_year;
-
-
+    persons[index,2] = course_year;
+    
     Console.Write("\n\tAddress : ");
     _address = Console.ReadLine();
-    address[index] = _address;
+    persons[index,3] = _address;
     
 }
 
