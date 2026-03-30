@@ -1,0 +1,15 @@
+/workspaces/CP2Program/PhoneBookApp/bin/Debug/net10.0/PhoneBookApp
+/workspaces/CP2Program/PhoneBookApp/bin/Debug/net10.0/PhoneBookApp.deps.json
+/workspaces/CP2Program/PhoneBookApp/bin/Debug/net10.0/PhoneBookApp.runtimeconfig.json
+/workspaces/CP2Program/PhoneBookApp/bin/Debug/net10.0/PhoneBookApp.dll
+/workspaces/CP2Program/PhoneBookApp/bin/Debug/net10.0/PhoneBookApp.pdb
+/workspaces/CP2Program/PhoneBookApp/obj/Debug/net10.0/PhoneBookApp.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/CP2Program/PhoneBookApp/obj/Debug/net10.0/PhoneBookApp.AssemblyInfoInputs.cache
+/workspaces/CP2Program/PhoneBookApp/obj/Debug/net10.0/PhoneBookApp.AssemblyInfo.cs
+/workspaces/CP2Program/PhoneBookApp/obj/Debug/net10.0/PhoneBookApp.csproj.CoreCompileInputs.cache
+/workspaces/CP2Program/PhoneBookApp/obj/Debug/net10.0/PhoneBookApp.sourcelink.json
+/workspaces/CP2Program/PhoneBookApp/obj/Debug/net10.0/PhoneBookApp.dll
+/workspaces/CP2Program/PhoneBookApp/obj/Debug/net10.0/refint/PhoneBookApp.dll
+/workspaces/CP2Program/PhoneBookApp/obj/Debug/net10.0/PhoneBookApp.pdb
+/workspaces/CP2Program/PhoneBookApp/obj/Debug/net10.0/PhoneBookApp.genruntimeconfig.cache
+/workspaces/CP2Program/PhoneBookApp/obj/Debug/net10.0/ref/PhoneBookApp.dll
